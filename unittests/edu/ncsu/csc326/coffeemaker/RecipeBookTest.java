@@ -147,6 +147,7 @@ public class RecipeBookTest extends TestCase {
 	}
 	
 	//Makes sure that recipe is actually deleted from recipe array
+	//the recipe that is deleted is replaced with an empty recipe object
 	@Test
 	public void testdeleteRecipe2() {
 		rb.addRecipe(r);
