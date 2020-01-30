@@ -78,6 +78,18 @@ public class InventoryTest extends TestCase {
 	}
 	
 	@Test
+	public void testSetChocolateSuperHigh() throws Exception {
+		inventory.setChocolate(10000);
+		assertEquals(inventory.getChocolate(), 10000);
+	}
+	
+	@Test
+	public void testSetChocolateSuperLow() throws Exception {
+		inventory.setChocolate(-10000);
+		assertEquals(inventory.getChocolate(), DEFAULT_AMT);
+	}
+	
+	@Test
 	public void testAddChocolateValidStringValidAmount() throws Exception {
 		try {
 			inventory.addChocolate("0");
@@ -143,6 +155,18 @@ public class InventoryTest extends TestCase {
 	public void testSetCoffee() throws Exception {
 		inventory.setCoffee(0);
 		assertEquals(inventory.getCoffee(), 0);
+	}
+	
+	@Test
+	public void testSetCoffeeSuperHigh() throws Exception {
+		inventory.setCoffee(10000);
+		assertEquals(inventory.getCoffee(), 10000);
+	}
+	
+	@Test
+	public void testSetCoffeeSuperLow() throws Exception {
+		inventory.setCoffee(-10000);
+		assertEquals(inventory.getCoffee(), DEFAULT_AMT);
 	}
 	
 	@Test
@@ -214,6 +238,18 @@ public class InventoryTest extends TestCase {
 	}
 	
 	@Test
+	public void testSetMilkSuperHigh() throws Exception {
+		inventory.setMilk(10000);
+		assertEquals(inventory.getMilk(), 10000);
+	}
+	
+	@Test
+	public void testSetMilkSuperLow() throws Exception {
+		inventory.setMilk(-10000);
+		assertEquals(inventory.getMilk(), DEFAULT_AMT);
+	}
+	
+	@Test
 	public void testAddMilkValidStringValidAmount() throws Exception {
 		try {
 			inventory.addMilk("0");
@@ -279,6 +315,18 @@ public class InventoryTest extends TestCase {
 	public void testSetSugar() throws Exception {
 		inventory.setSugar(0);
 		assertEquals(inventory.getSugar(), 0);
+	}
+	
+	@Test
+	public void testSetSugarSuperHigh() throws Exception {
+		inventory.setSugar(10000);
+		assertEquals(inventory.getSugar(), 10000);
+	}
+	
+	@Test
+	public void testSetSugarSuperLow() throws Exception {
+		inventory.setSugar(-10000);
+		assertEquals(inventory.getSugar(), DEFAULT_AMT);
 	}
 	
 	@Test
