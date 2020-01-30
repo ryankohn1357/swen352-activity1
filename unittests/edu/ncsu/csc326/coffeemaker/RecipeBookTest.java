@@ -139,7 +139,7 @@ public class RecipeBookTest extends TestCase {
 		assertEquals(test[1], null);
 	}
 	
-	//Makes sure it returns the proper string
+	//Makes sure it returns the proper deleted recipe string
 	@Test
 	public void testdeleteRecipe() {
 		rb.addRecipe(r);
@@ -147,13 +147,13 @@ public class RecipeBookTest extends TestCase {
 	}
 	
 	//Makes sure that recipe is actually deleted from recipe array
-	//the recipe that is deleted is replaced with an empty recipe object
+	//the recipe that is deleted is replaced with an empty recipe object, should be null
 	@Test
 	public void testdeleteRecipe2() {
 		rb.addRecipe(r);
 		rb.deleteRecipe(0);
 		Recipe [] test = rb.getRecipes();
-		assertEquals(test[0].toString(), "");
+		assertEquals(test[0], null);
 	}
 	
 	//Shows that when you try deleting a recipe that doesn't exist it returns null
@@ -182,13 +182,13 @@ public class RecipeBookTest extends TestCase {
 		//assertEquals(test[0].toString(), "");
 	}
 	
-	//The edited recipe name is now "" which should be "r2"
+	//The edited recipe name is now "" which should be "r"
 	@Test
 	public void testeditRecipe2() {
 		rb.addRecipe(r);
 		assertEquals(rb.editRecipe(0, r2), "r");
 		Recipe [] test = rb.getRecipes();
-		assertEquals(test[0].toString(), "");
+		assertEquals(test[0].toString(), "r");
 	}
 	
 	//Checks that edit recipe returns null when there is no recipe to edit
