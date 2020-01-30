@@ -1,6 +1,7 @@
 package edu.ncsu.csc326.coffeemaker;
 
 import junit.framework.TestCase;
+
 import org.junit.*;
 
 import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
