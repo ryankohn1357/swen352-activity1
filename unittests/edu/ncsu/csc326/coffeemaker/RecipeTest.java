@@ -268,7 +268,6 @@ public class RecipeTest extends TestCase {
 		Recipe recipe = new Recipe();
 		recipe.setName("hello");
 		int hashcode = recipe.hashCode();
-		System.out.println(hashcode);
 		assertEquals("Hashcode returned should be 99162353", 99162353, hashcode);
 	}
 	
@@ -276,7 +275,6 @@ public class RecipeTest extends TestCase {
 	public void testHashcode2() {
 		Recipe recipe = new Recipe();
 		int hashcode = recipe.hashCode();
-		System.out.println(hashcode);
 		assertEquals("Hashcode returned should be 31", 31, hashcode);
 	}
 	
